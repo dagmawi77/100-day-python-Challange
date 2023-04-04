@@ -52,13 +52,23 @@
 
 # #Convert Bool to String
 
-# print(str(True))
+# # print(str(True))
 
-# 🚨 Don't change the code below 👇
-two_digit_number = input("Type a two digit number: ")
-# 🚨 Don't change the code above 👆
-####################################
-#Write your code below this line 👇
-num_one = int(two_digit_number[0])
-num_two = int(two_digit_number[1])
-print(num_one + num_two)
+# # 🚨 Don't change the code below 👇
+# two_digit_number = input("Type a two digit number: ")
+# # 🚨 Don't change the code above 👆
+# ####################################
+# #Write your code below this line 👇
+# num_one = int(two_digit_number[0])
+# num_two = int(two_digit_number[1])
+# print(num_one + num_two)
+
+#Calculate Two Number
+number_two = input("Enter Two Number to Calculate? ")
+
+num_one = int(number_two[0])
+num_two = int(number_two[1])
+
+result = num_one * num_two
+
+print(result)
