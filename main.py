@@ -53,16 +53,39 @@
 # Project For Band Name Generator
 
 # Welcoming Your User By promting how the App Works
-print("Welcome Band Name Generator Apps")
+# print("Welcome Band Name Generator Apps")
 
-#input Your Born Address
+# #input Your Born Address
 
-born = input("Where Do You Born please enter the City ? \n")
+# born = input("Where Do You Born please enter the City ? \n")
 
-#second Input the User Dog Name
+# #second Input the User Dog Name
 
-dog_name = input("Please Enter Your Dog name ? \n")
+# dog_name = input("Please Enter Your Dog name ? \n")
 
-#Concatinate The input with Additional Message
+# #Concatinate The input with Additional Message
 
-print("Your Band Name is ......." + born + " " + dog_name)
+# print("Your Band Name is ......." + born + " " + dog_name)
+
+
+# it all about data type
+
+#print the index of Charator W
+
+print("Hello World"[6])
+
+#String Data type
+
+print ("Hello " + "Python")
+
+#intiger Data Type
+
+print(444+555)
+
+#Float Data Type
+
+print(34356.22 +10.44)
+
+#Boolean Data Type
+
+print(True)
