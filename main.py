@@ -67,25 +67,37 @@
 
 # print("Your Band Name is ......." + born + " " + dog_name)
 
-
 # it all about data type
 
 #print the index of Charator W
 
-print("Hello World"[6])
+# print("Hello World"[6])
 
-#String Data type
+# #String Data type
 
-print ("Hello " + "Python")
+# print ("Hello " + "Python")
 
-#intiger Data Type
+# #intiger Data Type
 
-print(444+555)
+# print(444+555)
 
-#Float Data Type
+# #Float Data Type
 
-print(34356.22 +10.44)
+# print(34356.22 +10.44)
 
-#Boolean Data Type
+# #Boolean Data Type
 
-print(True)
+# print(True)
+
+# Data Type Finder and Data type Convertor
+
+name = input("What is Your Name? ..")
+
+name_len = str(len(name))
+
+print("the Input Name " + name + "have " + name_len + " Charactor")
+
+print(type("Something"))
+print(type(3252))
+print(type(True))
+print(type(42534.253462))
