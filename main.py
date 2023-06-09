@@ -145,3 +145,24 @@ numOne = int(two_digit_number[0])
 numTwo = int(two_digit_number[1])
 
 print(numOne + numTwo)
+
+# About Matimatical Operation
+
+# addition
+
+print(22 + 33)
+
+# Subtraction
+
+print(33 - 22)
+
+# Multiplication
+print(50 * 4)
+
+# devision
+
+print(50 / 4)
+
+#Exponintal
+
+print(4**3)
