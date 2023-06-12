@@ -166,3 +166,50 @@ print(50 / 4)
 #Exponintal
 
 print(4**3)
+
+# Other Type is Complex Number
+
+complex_num = 2 + 3j
+
+print(complex_num.real)
+print(complex_num.imag)
+
+#It all About Additional Data type like list,tuple,dictionary,set,frozenset
+name = "Hello You"
+
+print(len(name))
+
+# Example Of List
+numbers = [10, 22, 44, 66]
+
+print(numbers)
+print(numbers[2])
+
+# Example Of Tuples
+
+weekdays = ("Monday", "Tusday", "Wednsday", "Thrsday", "Friday")
+
+print(weekdays)
+print(weekdays[2])
+
+# Dictionary
+
+student_info = {"name": "Dagmawi Letarik", "age": 27, "Countery": "Ethiopia"}
+print(student_info)
+
+print(student_info["name"])
+# Set
+
+furutSet = {"banana", "oragnge"}
+furutSet.add("apple")
+print(furutSet)
+
+# frozenset
+
+vowels = frozenset("aeiou")
+print(vowels)
+
+# None Type
+
+noneType = None
+print(noneType)
