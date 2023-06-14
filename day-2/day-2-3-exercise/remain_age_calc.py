@@ -9,10 +9,10 @@ constInt = 90
 
 remainAge = constInt - ageInt
 
-day = remainAge * 366
+day = remainAge * 365
 
-week = day / 7
+week = remainAge * 52
 
-month = day / 30
+month = remainAge * 12
 
 print(f"You Have {day} Day , {week} Week and {month} remain ")
