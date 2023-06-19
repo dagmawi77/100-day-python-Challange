@@ -30,3 +30,8 @@ size = len(name_spliter)
 luck_winner = random.randint(0, size - 1)
 
 print(f"Winner For Condominum is {name_spliter[luck_winner]}")
+# thired Option To do This Taks
+# or you can use random choose Option
+random_choos = random.choice(name_spliter)
+
+print(f"Winner For Condominum is {random_choos}")
