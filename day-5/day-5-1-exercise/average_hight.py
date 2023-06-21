@@ -4,15 +4,13 @@ for n in range(0, len(student_heights)):
   student_heights[n] = int(student_heights[n])
 # 🚨 Don't change the code above 👆
 
-
 #Write your code below this row 👇
-sum_student =0
+sum_student = 0
 count = 0
 for student_height in student_heights:
   sum_student += student_height
-  count +=1
+  count += 1
 
-average_student= sum_student/count
+average_student = round(sum_student / count)
 
-print(round(average_student))
-
+print(average_student)
