@@ -1,15 +1,10 @@
 #Write your code below this row 👇
-fizzBuzz = ""
 for number in range(1, 101):
   if number % 3 == 0 and number % 5 == 0:
-    fizzBuzz = "FizzBuzz"
-    print(fizzBuzz)
+    print("FizzBuzz")
   elif number % 3 == 0:
-    fizzBuzz = "Fizz"
-    print(fizzBuzz)
+    print("Fizz")
   elif number % 5 == 0:
-    fizzBuzz = "Buzz"
-    print(fizzBuzz)
+    print("Buzz")
   else:
-    fizzBuzz = number
-    print(fizzBuzz)
+    print(number)
