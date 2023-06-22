@@ -36,19 +36,50 @@ four_step()
 # Library Code is below.
 ################################################################
 
+
 def turn_right():
-    turn_left()
-    turn_left()
-    turn_left()
+  turn_left()
+  turn_left()
+  turn_left()
+
+
 def jump():
-    move()
-    turn_left()
-    move()
-    turn_right()
-    move()
-    turn_right()
-    move()
-    turn_left()
-for step in range(0,6):
-    jump()
+  move()
+  turn_left()
+  move()
+  turn_right()
+  move()
+  turn_right()
+  move()
+  turn_left()
+
+
+for step in range(0, 6):
+  jump()
 #count_num = 6
+
+
+# version 3
+def turn_right():
+  turn_left()
+  turn_left()
+  turn_left()
+
+
+def jump():
+  move()
+  turn_left()
+  move()
+  turn_right()
+  move()
+  turn_right()
+  move()
+  turn_left()
+
+
+#for step in range(0,6):
+#    jump()
+count_num = 0
+while count_num < 6:
+  jump()
+  count_num += 1
