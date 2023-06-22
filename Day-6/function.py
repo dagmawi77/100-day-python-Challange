@@ -1,4 +1,5 @@
 def myFunction():
-  print("Hello Dagmawi")
-  print("Hello Some body")
+    print("Hello Dagmawi")
+    print("Hello Some body")
 myFunction()
+   
