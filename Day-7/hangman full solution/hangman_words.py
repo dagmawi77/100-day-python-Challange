@@ -10,6 +10,7 @@ word_list = [
   'azure',
   'bagpipes',
   'bandwagon',
+  'banana',
   'banjo',
   'bayou',
   'beekeeper',
