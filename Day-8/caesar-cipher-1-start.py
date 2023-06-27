@@ -1,28 +1,27 @@
 alphabet = [
-    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
-    'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+  'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
+  'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
 ]
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
+# Adding the Algorithm first
 #TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
-
 
 
 def encrypt(text, shift):
   split_text = []
   for index, items in enumerate(alphabet):
-        for letter in text:
-            split_text.append(letter)
-            if letter == items:
-                print(items, index)
-                print(items[index+shift])
+    for letter in text:
+      split_text.append(letter)
+      if letter == items:
+        print(items, index)
+        print(items[index + shift])
 
 
 encrypt(text, shift)
-
 
 #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.
 #e.g.
