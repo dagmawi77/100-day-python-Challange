@@ -21,12 +21,12 @@ def encrypt(plain_text, shift_amount):
 
 #TODO-1: Create a different function called 'decrypt' that takes the 'text' and 'shift' as inputs.
 def decrypt(plain_text, shift_amount):
-  cipher_text = ""
+  plain_text_result = ""
   for letter in plain_text:
     position = alphabet.index(letter)
     new_position = position - shift_amount
-    cipher_text += alphabet[new_position]
-  print(f"The encoded text is {cipher_text}")
+    plain_text_result += alphabet[new_position]
+  print(f"The encoded text is {plain_text_result}")
   #TODO-2: Inside the 'decrypt' function, shift each letter of the 'text' *backwards* in the alphabet by the shift amount and print the decrypted text.
   #e.g.
   #cipher_text = "mjqqt"
