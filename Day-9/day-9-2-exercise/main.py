@@ -16,14 +16,19 @@ travel_log = [
 
 #TODO: Write the function that will allow new countries
 #to be added to the travel_log. 👇
-def add_new_country(country, visits, cities):
-    travel_log = {"country": country, "visits": visits, "cities": cities}
-    print(
-        f"You've visited {travel_log['country']} {travel_log['visits']} times."
+def add_new_country(country_visted, visits_visted, cities_visted):
+  new_travel_log = {}
+  new_travel_log["country"]=country_visted 
+  new_travel_log["visits"]=visits_visted
+  new_travel_log["cities"]=cities_visted
+  print(
+        f"You've visited {new_travel_log['country']} {new_travel_log['visits']} times."
     )
-    print(
-        f"You've been to {travel_log['cities'][0]} and {travel_log['cities'][1]}"
+  print(
+        f"You've been to {new_travel_log['cities'][0]} and {new_travel_log['cities'][1]}"
     )
+
+  travel_log.append(new_travel_log)
 
 
 #🚨 Do not change the code below
