@@ -39,32 +39,44 @@ import random
 
 def deal_card():
   cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+  card = random.choice(cards)
+  return card
 
   #Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
   #user_cards = []
   #computer_cards = []
-  user_cards = []
-  computer_cards = []
-  for card in range(0, 2):
-    user_cards_random = random.choice(cards)
-    user_cards.append(user_cards_random)
-    computer_cards_random = random.choice(cards)
-    computer_cards.append(computer_cards_random)
-  print(f"The User Card is {user_cards}")
-  print(f"The Computer Card is {computer_cards}")
+
+
+user_cards = []
+computer_cards = []
+for _ in range(2):
+  # new_card = deal_card()
+  user_cards.append(deal_card())
+  # computer_cards_random = deal_card()
+  computer_cards.append(deal_card())
+print(f"The User Card is {user_cards}")
+print(f"The Computer Card is {computer_cards}")
+
+
+def calculate_score(user_cards, computer_cards):
   print(sum(user_cards), sum(computer_cards))
+
 
 #Hint 6: Create a function called calculate_score() that takes a List of cards as input
 #and returns the score.
 #Look up the sum() function to help you do this.
-def calculate_score():
-  deal_card()
+def calculate_score(cards):
   # print(sum(user_cards), sum(computer_cards))
 
-
-#Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
-
+  #Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
+  if sum(cards) == 21 and len(cards) == 2:
+    return 0
 #Hint 8: Inside calculate_score() check for an 11 (ace). If the score is already over 21, remove the 11 and replace it with a 1. You might need to look up append() and remove().
+  if 11 in cards and sum(cards) > 21:
+    cards.remove(11)
+    cards.append(1)
+  return sum(cards)
+
 
 #Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
 
@@ -79,4 +91,4 @@ def calculate_score():
 #Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 
 deal_card()
-# calculate_score(user_cards,computer_cards)
+calculate_score()
