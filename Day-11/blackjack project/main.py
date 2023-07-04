@@ -47,17 +47,6 @@ def deal_card():
   #computer_cards = []
 
 
-user_cards = []
-computer_cards = []
-for _ in range(2):
-  # new_card = deal_card()
-  user_cards.append(deal_card())
-  # computer_cards_random = deal_card()
-  computer_cards.append(deal_card())
-print(f"The User Card is {user_cards}")
-print(f"The Computer Card is {computer_cards}")
-
-
 def calculate_score(user_cards, computer_cards):
   print(sum(user_cards), sum(computer_cards))
 
@@ -71,16 +60,44 @@ def calculate_score(cards):
   #Hint 7: Inside calculate_score() check for a blackjack (a hand with only 2 cards: ace + 10) and return 0 instead of the actual score. 0 will represent a blackjack in our game.
   if sum(cards) == 21 and len(cards) == 2:
     return 0
+
+
 #Hint 8: Inside calculate_score() check for an 11 (ace). If the score is already over 21, remove the 11 and replace it with a 1. You might need to look up append() and remove().
   if 11 in cards and sum(cards) > 21:
     cards.remove(11)
     cards.append(1)
   return sum(cards)
 
+user_cards = []
+computer_cards = []
+is_game_over = False
 
-#Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
+for _ in range(2):
+  # new_card = deal_card()
+  user_cards.append(deal_card())
+  # computer_cards_random = deal_card()
+while not is_game_over:
+  computer_cards.append(deal_card())
+  print(f"The User Card is {user_cards}")
+  print(f"The Computer Card is {computer_cards}")
+  user_score = calculate_score(user_cards)
+  computer_score = calculate_score(computer_cards)
+  print(user_score)
+  print(computer_score)
 
-#Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
+  if user_score == 0 or computer_score == 0 or user_score > 21:
+    is_game_over = True
+  else:
+    #Hint 9: Call calculate_score(). If the computer or the user has a blackjack (0) or if the user's score is over 21, then the game ends.
+
+    #Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
+    shoud_user_continue = input(
+      "if they want to draw another card type 'y' or if not type 'n'?")
+  if shoud_user_continue == 'y':
+    user_cards.append(deal_card())
+    print(user_cards)
+  else:
+    is_game_over = False
 
 #Hint 11: The score will need to be rechecked with every new card drawn and the checks in Hint 9 need to be repeated until the game ends.
 
@@ -91,4 +108,4 @@ def calculate_score(cards):
 #Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 
 deal_card()
-calculate_score()
+calculate_score(user_cards)
