@@ -1,5 +1,6 @@
 ############DEBUGGING#####################
 
+
 # Describe Problem
 # the for loop is only count upto 19
 def my_function():
@@ -7,13 +8,16 @@ def my_function():
     if i == 20:
       print("You got it")
 
+
 my_function()
 
-# # Reproduce the Bug
-# from random import randint
-# dice_imgs = ["❶", "❷", "❸", "❹", "❺", "❻"]
-# dice_num = randint(1, 6)
-# print(dice_imgs[dice_num])
+# Reproduce the Bug
+from random import randint
+
+dice_imgs = ["❶", "❷", "❸", "❹", "❺", "❻"]
+# The error is Index Out Of Boundery
+dice_num = randint(1, len(dice_imgs) - 1)
+print(dice_imgs[dice_num])
 
 # # Play Computer
 # year = int(input("What's your year of birth?"))
