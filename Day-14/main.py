@@ -27,7 +27,7 @@ while continue_game:
   )
   print({choise_b['follower_count']})
 
-  user_guess = input("Who has More Follower? Type 'A' or B ").capitalize()
+  user_guess = input("Who has More Follower? Type 'A' or B   ").capitalize()
 
   if choise_a['follower_count'] > choise_b[
       'follower_count'] and user_guess == "A":
@@ -39,5 +39,5 @@ while continue_game:
     print(f"your right current score {life}")
   else:
     continue_game = False
-    clear()
     print(f"sorry , that is wrong.Final Score: {life}")
+    clear()
