@@ -7,8 +7,9 @@ from replit import clear
 
 # printing basic interface
 print(logo)
-
+# track life functionality
 life = 0
+# game repitative functionality
 continue_game = True
 while continue_game:
   choise_a = random.choice(data)
