@@ -7,12 +7,14 @@ from replit import clear
 
 # printing basic interface
 print(logo)
-# track life functionality
+
 life = 0
-# game repitative functionality
 continue_game = True
 while continue_game:
   choise_a = random.choice(data)
+  choise_b = random.choice(data)
+  if choise_a == choise_b:
+    choise_a = random.choice(data)
 
   print(
     f"Compare A: {choise_a['name']} a {choise_a['description']} , from {choise_a['country']}"
@@ -22,13 +24,15 @@ while continue_game:
 
   print(vs)
 
-  choise_b = random.choice(data)
   print(
     f"Compare B: {choise_b['name']} a {choise_b['description']} , from {choise_b['country']}"
   )
   print({choise_b['follower_count']})
 
-  user_guess = input("Who has More Follower? Type 'A' or B   ").capitalize()
+  user_guess = input("Who has More Follower? Type 'A' or B ").capitalize()
+
+  clear()
+  print(logo)
 
   if choise_a['follower_count'] > choise_b[
       'follower_count'] and user_guess == "A":
@@ -41,4 +45,3 @@ while continue_game:
   else:
     continue_game = False
     print(f"sorry , that is wrong.Final Score: {life}")
-    clear()
