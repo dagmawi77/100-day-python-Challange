@@ -30,3 +30,10 @@ resources = {
     "coffee": 100,
 }
 
+
+user_choies = input("What would you like? (espresso/latte/cappuccino): ").lower()
+
+if user_choies == "report":
+    for index in resources:
+        print(f"{index} : {resources[index]}")
+        # print()
