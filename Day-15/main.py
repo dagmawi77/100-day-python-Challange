@@ -33,7 +33,22 @@ resources = {
 
 user_choies = input("What would you like? (espresso/latte/cappuccino): ").lower()
 
+quarters = 0.25
+dimes = 0.10
+nickles = 0.05
+pennies = 0.01
+
+
 if user_choies == "report":
     for index in resources:
         print(f"{index} : {resources[index]}")
-        # print()
+elif user_choies == "espresso" or user_choies == "latte" or user_choies == "cappuccino":
+    print("please Enter Coin.")
+    quarters_value = int(input("How many quarters? : "))
+    dimes_value = int(input("How many dimes? : "))
+    nickles_value = int(input("How many nickles? : "))
+    pennies_value = int(input("How many quarters? : "))
+
+
+    change = (quarters * quarters_value) + (dimes * dimes_value) + (nickles * nickles_value) + (pennies * pennies_value)
+    print(f"here is change ${round(change)}")
