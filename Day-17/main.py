@@ -1,11 +1,13 @@
 class User:
-    user_name = "Dagmawi"
-    age = 26
 
-userOne = User()
+    def __init__(self, user_name, email):
+        self.user_name = user_name
+        self.email = email
+        self.follower = 0
 
-print(userOne.user_name)
-print(userOne.age)
+
+userOne = User("Dagmawi", "dagmawiletarik@gmail.com")
+print(f"The user name: {userOne.user_name} \nEmail Address : {userOne.email} \nFollower : {userOne.follower}")
 
 
 
