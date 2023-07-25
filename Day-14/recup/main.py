@@ -4,7 +4,7 @@
 from art import logo, vs
 from game_data import data
 import random
-import replit
+# import replit
 #first print all game material
 print(logo)
 
@@ -30,3 +30,4 @@ while game_continue:
     else:
         print(f"Sorry, that is wrong. Final Score {score} ")
         game_continue = False
+        
