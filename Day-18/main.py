@@ -1,4 +1,6 @@
-from turtle import Turtle, Screen
+
+import turtle as t
+from turtle import Screen
 import random
 
 # timmy_the_turtle = Turtle()
@@ -38,7 +40,8 @@ import random
 #
 # import heroes
 #
-dagi = Turtle()
+dagi = t.Turtle()
+# dagi = Turtle()
 #
 # dagi.shape("turtle")
 # dagi.color("green")
@@ -78,13 +81,23 @@ dagi = Turtle()
 #     dagi.forward(100)
 #     dagi.left(angle)
 # def draw_shape(number_side):
-color = ["blue", "aquamarine", "chocolate", "magenta", "blue violet", "orange"]
+# color = ["blue", "aquamarine", "chocolate", "magenta", "blue violet", "orange"]
+t.colormode(255)
+
+
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    random_color = (r, g, b)
+    return random_color
+
 direction = [0, 90, 180, 270]
 for _ in range(200):
     dagi.pensize(3)
     dagi.forward(30)
     dagi.setheading(random.choice(direction))
-    dagi.color(random.choice(color))
+    dagi.color(random.choice(random_color()))
     dagi.speed(10)
 
 #     angle = 360 / number_side
