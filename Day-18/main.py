@@ -39,7 +39,6 @@ import random
 # from turtle import Turtle,Screen
 # from random import Random
 #
-# import heroes
 #
 dagi = t.Turtle()
 # dagi = Turtle()
@@ -62,7 +61,7 @@ dagi = t.Turtle()
 #     dagi.penup()
 #     dagi.forward(10)
 
-# Draw Different angle from rectangle to decagone
+# Draw Different angle from rectangle to decagon
 # triangle = 3
 # angle = 360 / triangle
 #
@@ -93,6 +92,8 @@ dagi = t.Turtle()
 #     draw_shape(num)
 # random walk
 t.colormode(255)
+
+
 def random_color():
     r = random.randint(0, 255)
     g = random.randint(0, 255)
@@ -100,17 +101,30 @@ def random_color():
     random_color = (r, g, b)
     return random_color
 
-color = ["blue", "aquamarine", "chocolate", "magenta", "blue violet", "orange"]
-direction  = [0, 90, 180, 270]
-side = 4
+# color = ["blue", "aquamarine", "chocolate", "magenta", "blue violet", "orange"]
+# direction  = [0, 90, 180, 270]
+# side = 4
+# angle = 360 / side
+# for _ in range(0, 100):
+#     dagi.pensize(10)
+#     # dagi.forward(100)
+#     dagi.setheading(random.choice(direction))
+#     dagi.forward(40)
+#     dagi.left(angle)
+#     dagi.color(random_color())
+# Draw spiral
+
+
+side = 360
 angle = 360 / side
-for _ in range(0, 100):
-    dagi.pensize(10)
-    # dagi.forward(100)
-    dagi.setheading(random.choice(direction))
-    dagi.forward(40)
+for _ in range(side):
+    dagi.speed(5000)
+    # dagi.pensize(2)
+    dagi.circle(120)
+    dagi.forward(5)
     dagi.left(angle)
     dagi.color(random_color())
+
 # exercise for Draw Square
 # randMove = ["left","right","forward","backward"]
 # draw = True
@@ -122,9 +136,6 @@ for _ in range(0, 100):
 
 # color = ["blue", "aquamarine", "chocolate", "magenta", "blue violet", "orange"]
 # t.colormode(255)
-
-
-
 #
 # direction = [0, 90, 180, 270]
 # for _ in range(200):
@@ -143,7 +154,7 @@ for _ in range(0, 100):
 #     draw_shape(num)
 
 # draw random line
-# this is the junk step to complet the challange
+# this is the junk step to complete the challenge
 # dagi.forward(100)
 # dagi.left(90)
 # dagi.forward(100)
