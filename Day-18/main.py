@@ -92,20 +92,7 @@ dagi = t.Turtle()
 # for num in range(3,10):
 #     draw_shape(num)
 # random walk
-
-color = ["blue","aquamarine","chocolate","magenta","blue violet","orange"]
-randMove = ["left","right","forward","backward"]
-draw = True
-while draw:
-    dagi.pensize(10)
-    dagi.color(random.choice(color))
-    dagi.forward(10)
-    dagi.left(10)
-
-# color = ["blue", "aquamarine", "chocolate", "magenta", "blue violet", "orange"]
 t.colormode(255)
-
-
 def random_color():
     r = random.randint(0, 255)
     g = random.randint(0, 255)
@@ -113,13 +100,39 @@ def random_color():
     random_color = (r, g, b)
     return random_color
 
-direction = [0, 90, 180, 270]
-for _ in range(200):
-    dagi.pensize(3)
-    dagi.forward(30)
+color = ["blue", "aquamarine", "chocolate", "magenta", "blue violet", "orange"]
+direction  = [0, 90, 180, 270]
+side = 4
+angle = 360 / side
+for _ in range(0, 100):
+    dagi.pensize(10)
+    # dagi.forward(100)
     dagi.setheading(random.choice(direction))
-    dagi.color(random.choice(random_color()))
-    dagi.speed(10)
+    dagi.forward(40)
+    dagi.left(angle)
+    dagi.color(random_color())
+# exercise for Draw Square
+# randMove = ["left","right","forward","backward"]
+# draw = True
+# while draw:
+#     dagi.pensize(10)
+#     dagi.color(random.choice(color))
+#     dagi.forward(10)
+#     dagi.left(10)
+
+# color = ["blue", "aquamarine", "chocolate", "magenta", "blue violet", "orange"]
+# t.colormode(255)
+
+
+
+#
+# direction = [0, 90, 180, 270]
+# for _ in range(200):
+#     dagi.pensize(3)
+#     dagi.forward(30)
+#     dagi.setheading(random.choice(direction))
+#     dagi.color(random.choice(random_color()))
+#     dagi.speed(10)
 
 #     angle = 360 / number_side
 #     for _ in range(number_side):
