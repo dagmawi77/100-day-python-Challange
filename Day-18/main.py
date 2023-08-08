@@ -7,7 +7,7 @@ import heroes
 dagi = Turtle()
 
 dagi.shape("turtle")
-dagi.color("green")
+# dagi.color("green")
 # I can do with for loop
 # Draw Rectangle
 # for _ in range(4):
@@ -43,15 +43,26 @@ dagi.color("green")
 # for _ in range(hexagon):
 #     dagi.forward(100)
 #     dagi.left(angle)
-def draw_shape(number_side):
-    color = ["blue","aquamarine","chocolate","magenta","blue violet","orange"]
-    angle = 360 / number_side
-    for _ in range(number_side):
-        dagi.forward(100)
-        dagi.left(angle)
+# def draw_shape(number_side):
+#     color = ["blue","aquamarine","chocolate","magenta","blue violet","orange"]
+#     angle = 360 / number_side
+#     for _ in range(number_side):
+#         dagi.forward(100)
+#         dagi.left(angle)
+#     dagi.color(random.choice(color))
+# for num in range(3,10):
+#     draw_shape(num)
+# random walk
+
+color = ["blue","aquamarine","chocolate","magenta","blue violet","orange"]
+randMove = ["left","right","forward","backward"]
+draw = True
+while draw:
+    dagi.pensize(10)
     dagi.color(random.choice(color))
-for num in range(3,10):
-    draw_shape(num)
+    dagi.forward(10)
+    dagi.left(10)
+
 
 
 # this is the junk step to complet the challange
